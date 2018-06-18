@@ -1,0 +1,26 @@
+<!--pages/games/index.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">所有比赛</view>
+            <view class="weui-panel__bd">
+                <view wx:for="{{ gamesList }}" wx:for-item="info" wx:key="*this">
+                    <navigator url="info?gamesID={{ info.GamesID }}&venue={{info.Venue}}&startDate={{info.StartDate}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                            <image class="weui-media-box__thumb" src="../../images/icons/swim.png" />
+                        </view>
+                        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                            <view class="weui-media-box__title">{{ info.GamesName }}</view>
+                            <view class="weui-media-box__desc">
+                                <text>结束报名时间：{{ info.EndDate }}\n比赛地点：{{ info.Venue }}</text>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page__ft">
+        <include src="/pages/include/footer.wxml" />
+    </view>
+</view>

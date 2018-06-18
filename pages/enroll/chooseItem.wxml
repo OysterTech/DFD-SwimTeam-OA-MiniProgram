@@ -1,0 +1,15 @@
+<!--pages/enroll/chooseItem.wxml-->
+
+<view class="page-section">
+    <view class="page-section-title">请勾选需要报名的项目</view>
+    <view class="weui-cells weui-cells_after-title">
+        <checkbox-group bindchange="checkboxChange">
+            <label class="weui-cell weui-check__label" wx:for="{{itemList}}" wx:for-item="item" wx:key="items">
+                <view class="weui-cell__hd">
+                    <checkbox value="{{item.ItemID}}" />
+                </view>
+                <view class="weui-cell__bd">{{item.ItemName}}</view>
+            </label>
+        </checkbox-group>
+    </view>
+</view>

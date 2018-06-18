@@ -1,0 +1,5 @@
+/* pages/enroll/chooseItem.wxss */
+
+.checkbox{
+  margin-right: 20rpx;
+}

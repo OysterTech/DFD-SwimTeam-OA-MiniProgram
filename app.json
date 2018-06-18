@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/games/index",
+        "pages/logs/logs",
+        "pages/user/index",
+        "pages/user/login",
+        "pages/games/info",
+        "pages/include/footer",
+        "pages/games/detail",
+        "pages/games/noticeList",
+        "pages/enroll/chooseItem",
+        "pages/tools/calculateAthleteLevel",
+        "pages/tools/index"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#118fff",
+        "navigationBarTitleText": "东风东游泳队管理系统",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/games/index",
+                "iconPath": "images/icons/navbar/games.png",
+                "selectedIconPath": "images/icons/navbar/games2.png",
+                "text": "比赛报名"
+            },
+            {
+                "pagePath": "pages/tools/index",
+                "iconPath": "images/icons/navbar/tool.png",
+                "selectedIconPath": "images/icons/navbar/tool2.png",
+                "text": "小工具"
+            },
+            {
+                "pagePath": "pages/user/index",
+                "iconPath": "images/icons/navbar/user.png",
+                "selectedIconPath": "images/icons/navbar/user2.png",
+                "text": "个人信息"
+            }
+        ]
+    }
+}

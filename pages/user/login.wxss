@@ -1,0 +1,4 @@
+/* pages/user/login.wxss */
+.title{
+    text-align: center;
+}

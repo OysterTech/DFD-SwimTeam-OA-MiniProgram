@@ -1,0 +1,7 @@
+<!--pages/games/detail.wxml-->
+<text>
+    比赛日期：{{ startDate }}
+    比赛地点：{{venue}}\n
+</text>
+
+<button type="primary" bindtap='goBack'><text decode='true'>&lt; 返回比赛</text></button>
