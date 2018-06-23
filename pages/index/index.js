@@ -28,38 +28,30 @@ Page({
                                     wx.setStorageSync('userCode', res.code);
                                 }
                             });
-                            // 若数据缓存内没有用户数据，请求获取
-                            if (wx.getStorageSync('userInfo') == "") {
-                                wx.request({
-                                    url: app.data.API_HOST + 'getProfile.php',
-                                    header: {
-                                        'content-type': 'application/json'
-                                    },
-                                    data: {
-                                        openID: wx.getStorageSync('openID')
-                                    },
-                                    success: function (res) {
-                                        console.log(res.data);
-                                        if (res.data.code == 1) {
-                                            wx.setStorageSync('userInfo', res.data.data);
-                                            _this.setData({
-                                                userInfo: res.data.data
-                                            });
-                                            wx.switchTab({
-                                                url: '/pages/games/index'
-                                            })
-                                        }else{
-                                            wx.redirectTo({
-                                                url:"/pages/user/login"
-                                            })
-                                        }
+                            wx.request({
+                                url: app.data.API_HOST + 'getProfile.php',
+                                header: {
+                                    'content-type': 'application/json'
+                                },
+                                data: {
+                                    openID: wx.getStorageSync('openID')
+                                },
+                                success: function (res) {
+                                    console.log(res.data);
+                                    if (res.data.code == 1) {
+                                        // 此openID有对应用户
+                                        wx.setStorageSync('userInfo', res.data.data);
+                                        wx.switchTab({
+                                            url: '/pages/games/index'
+                                        })
+                                    } else {
+                                        // 没有对应用户，跳转到登录页面
+                                        wx.redirectTo({
+                                            url: "/pages/user/login"
+                                        })
                                     }
-                                });
-                            }else{
-                                wx.switchTab({
-                                    url: '/pages/games/index'
-                                })
-                            }
+                                }
+                            });
                         } else {
                             console.log('登录失败！' + res.errMsg)
                         }

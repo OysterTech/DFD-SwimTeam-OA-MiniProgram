@@ -1,17 +1,20 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/games/index",
-        "pages/logs/logs",
-        "pages/user/index",
+        "pages/user/info",
         "pages/user/login",
+        "pages/games/index",
         "pages/games/info",
-        "pages/include/footer",
         "pages/games/detail",
-        "pages/games/noticeList",
+        "pages/games/notice/list",
+        "pages/games/notice/detail",
         "pages/enroll/chooseItem",
-        "pages/tools/calculateAthleteLevel",
-        "pages/tools/index"
+        "pages/tools/calculateAthleteLevel/index",
+        "pages/tools/index",
+        "pages/logs/logs",
+        "pages/include/footer",
+        "pages/user/updateUserInfo",
+        "pages/user/updateAthleteInfo"
     ],
     "window": {
         "navigationBarBackgroundColor": "#118fff",
@@ -37,7 +40,7 @@
                 "text": "小工具"
             },
             {
-                "pagePath": "pages/user/index",
+                "pagePath": "pages/user/info",
                 "iconPath": "images/icons/navbar/user.png",
                 "selectedIconPath": "images/icons/navbar/user2.png",
                 "text": "个人信息"

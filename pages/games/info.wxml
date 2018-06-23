@@ -1,14 +1,20 @@
 <!--pages/games/info.wxml-->
-<text>{{GamesID}}</text>
-
 <view class="weui-grids">
-    <block wx:if="{{userInfo.isAthlete==1}}" >
-        <navigator url="../enroll/chooseItem?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
-            <image class="weui-grid__icon" src="../../images/icons/signup.png" />
-            <view class="weui-grid__label">立即报名</view>
-        </navigator>
+    <block wx:if="{{userInfo.isAthlete==1}}">
+        <block wx:if="{{haveEnroll==0}}">
+            <navigator url="../enroll/chooseItem?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../images/icons/signup.png" />
+                <view class="weui-grid__label">立即报名</view>
+            </navigator>
+        </block>
+        <block wx:else>
+            <navigator url="../enroll/viewEnrollItem?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../images/icons/tick.png" />
+                <view class="weui-grid__label">查看报项</view>
+            </navigator>
+        </block>
     </block>
-    <navigator url="noticeList?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
+    <navigator url="notice/list?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
         <image class="weui-grid__icon" src="../../images/icons/notice.png" />
         <view class="weui-grid__label">通知规程</view>
     </navigator>

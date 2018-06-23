@@ -12,7 +12,12 @@ Page({
     onLoad: function (options) {
     },
 
-    toLogin:function(){
+    toLogin: function () {
 
+    },
+    toAuth: function () {
+        wx.redirectTo({
+            url: '/pages/index/index',
+        })
     }
 })

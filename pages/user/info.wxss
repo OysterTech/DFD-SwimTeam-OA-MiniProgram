@@ -1,0 +1,13 @@
+/* pages/user/index.wxss */
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 100%;
+   display: inline-block;
+}
+
+.center {
+    text-align: center;
+}

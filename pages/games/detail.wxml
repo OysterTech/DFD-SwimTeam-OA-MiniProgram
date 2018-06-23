@@ -5,3 +5,5 @@
 </text>
 
 <button type="primary" bindtap='goBack'><text decode='true'>&lt; 返回比赛</text></button>
+
+<include src="/pages/include/footer.wxml" />

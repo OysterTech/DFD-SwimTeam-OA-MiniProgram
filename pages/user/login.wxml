@@ -26,5 +26,9 @@
 </view>
 
 <text>\n</text>
-
 <button type='primary' bindtap='toLogin'>登录 / Login ></button>
+
+<text>\n</text>
+<button type='primary' bindtap='toAuth'>微信授权登录 / Authorize ></button>
+
+<include src="/pages/include/footer.wxml" />

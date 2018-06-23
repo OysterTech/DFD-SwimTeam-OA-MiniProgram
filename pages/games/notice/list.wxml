@@ -1,0 +1,18 @@
+<!--pages/games/noticeList.wxml-->
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">通知列表</view>
+    <view class="weui-panel__bd">
+        <view wx:if="{{noticeList!=''}}">
+            <view class="weui-media-box weui-media-box_text" wx:for="{{noticeList}}" wx:for-item="info" wx:key="*this">
+                <navigator url='/pages/games/notice/detail?noticeID={{info.NoticeID}}'>
+                    <view class="weui-media-box__title weui-media-box__title_in-text">{{info.Title}}</view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:else>
+            本比赛暂无通知！
+        </view>
+    </view>
+</view>
+
+<include src="/pages/include/footer.wxml" />

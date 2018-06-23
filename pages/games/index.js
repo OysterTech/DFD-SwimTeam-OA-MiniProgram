@@ -1,12 +1,11 @@
-//index.js
-//获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
     data: {
     },
 
-    onLoad:function () {
+    onLoad: function () {
+        
         this.getAllGames();
     },
 
@@ -17,26 +16,36 @@ Page({
 
     },
 
-    getAllGames:function(){
-       var  _this=this;
-       wx.showLoading({
-           title: '比赛数据加载中',
-           mask:'true',
-           success:function(a){
-               wx.request({
-                   url: app.data.API_HOST + 'getAllGames.php',
-                   header: {
-                       'content-type': 'application/json'
-                   },
-                   success: function (res) {
-                       console.log(res.data.data);
-                       _this.setData({
-                           gamesList: res.data.data
-                       });
-                      wx.hideLoading();
-                   }
-               })
-           }
-       })
+    onPullDownRefresh: function () {
+        wx.startPullDownRefresh({
+            success: function () {
+                _this.getAllGames();
+            }
+        });
+    },
+
+    getAllGames: function () {
+        var _this = this;
+        wx.showLoading({
+            title: '比赛数据加载中',
+            mask: 'true',
+            success: function (a) {
+                wx.request({
+                    url: app.data.API_HOST + 'getAllGames.php',
+                    header: {
+                        'content-type': 'application/json'
+                    },
+                    success: function (res) {
+                        console.log(res.data.data);
+                        _this.setData({
+                            gamesList: res.data.data
+                        });
+                        wx.hideLoading();
+                        wx.stopPullDownRefresh();
+                        return true;
+                    }
+                })
+            }
+        })
     }
 })

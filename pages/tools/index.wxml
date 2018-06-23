@@ -3,7 +3,11 @@
     <view class="weui-panel__hd">小工具列表</view>
     <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_text">
+            <navigator url='calculateAthleteLevel/index'>
             <view class="weui-media-box__title weui-media-box__title_in-text">计算运动员等级 ></view>
+            </navigator>
         </view>
     </view>
 </view>
+
+<include src="/pages/include/footer.wxml" />

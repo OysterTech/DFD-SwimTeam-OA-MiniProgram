@@ -3,7 +3,7 @@
 App({
     data:{
         HOST: 'https://dfd.xshgzs.com',
-        API_HOST:'https://dfd.xshgzs.com/Api/'
+        API_HOST:'https://api.xshgzs.com/dfd/'
     },
     onLaunch: function () {
         // 展示本地存储能力

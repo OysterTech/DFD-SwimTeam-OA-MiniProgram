@@ -5,7 +5,7 @@
             <view class="weui-panel__hd">所有比赛</view>
             <view class="weui-panel__bd">
                 <view wx:for="{{ gamesList }}" wx:for-item="info" wx:key="*this">
-                    <navigator url="info?gamesID={{ info.GamesID }}&venue={{info.Venue}}&startDate={{info.StartDate}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <navigator url="info?gamesID={{ info.GamesID }}&gamesName={{ info.GamesName }}&venue={{info.Venue}}&startDate={{info.StartDate}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                         <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                             <image class="weui-media-box__thumb" src="../../images/icons/swim.png" />
                         </view>
