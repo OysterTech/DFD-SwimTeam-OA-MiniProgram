@@ -5,7 +5,6 @@ Page({
     },
 
     onLoad: function () {
-        
         this.getAllGames();
     },
 
@@ -17,11 +16,12 @@ Page({
     },
 
     onPullDownRefresh: function () {
-        wx.startPullDownRefresh({
-            success: function () {
-                _this.getAllGames();
-            }
-        });
+        var _this = this;
+        _this.data.gamesList=[]
+        var status = _this.getAllGames();
+        if (status == true) {
+            wx.stopPullDownRefresh();
+        }
     },
 
     getAllGames: function () {

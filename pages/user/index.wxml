@@ -1,7 +1,0 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
-<view class="userinfo-avatar">
-    <open-data type="userAvatarUrl"></open-data>
-</view>
-<text>{{userInfo.RealName}}，欢迎回来！</text>
-<include src="/pages/include/footer.wxml" />

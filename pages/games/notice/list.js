@@ -1,5 +1,5 @@
 // pages/games/notice/list.js
-var app=getApp()
+var app = getApp()
 
 Page({
 
@@ -7,7 +7,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        noticeList:""
+        noticeList: ""
     },
 
     /**

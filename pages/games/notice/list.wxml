@@ -1,18 +1,24 @@
 <!--pages/games/noticeList.wxml-->
-<view class="weui-panel weui-panel_access">
-    <view class="weui-panel__hd">通知列表</view>
-    <view class="weui-panel__bd">
-        <view wx:if="{{noticeList!=''}}">
-            <view class="weui-media-box weui-media-box_text" wx:for="{{noticeList}}" wx:for-item="info" wx:key="*this">
-                <navigator url='/pages/games/notice/detail?noticeID={{info.NoticeID}}'>
-                    <view class="weui-media-box__title weui-media-box__title_in-text">{{info.Title}}</view>
-                </navigator>
-            </view>
-        </view>
-        <view wx:else>
-            本比赛暂无通知！
-        </view>
-    </view>
+<view class="weui-cells__title">通知列表</view>
+<view class="weui-cells weui-cells_after-title">
+    <!-- [bgn]有通知，显示列表 -->
+    <block wx:if="{{noticeList!=''}}">
+        <!-- [bgn]循环显示通知 -->
+        <block class="weui-media-box weui-media-box_text" wx:for="{{noticeList}}" wx:for-item="info" wx:key="*this">
+            <navigator url="/pages/games/notice/detail?noticeID={{info.NoticeID}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{info.Title}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </block>
+        <!-- [end]循环显示通知 -->
+    </block>
+    <!-- [end]有通知，显示列表 -->
+
+    <!-- [bgn]没有通知的提醒 -->
+    <block wx:else>
+        <view class="weui-cell__bd text_center">本比赛暂无通知！</view>
+    </block>
+    <!-- [end]没有通知的提醒 -->
 </view>
 
 <include src="/pages/include/footer.wxml" />

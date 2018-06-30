@@ -1,4 +1,4 @@
-<view class='center'>
+<view class='text_center'>
     <view class="userinfo-avatar">
         <open-data type="userAvatarUrl"></open-data>
     </view>
@@ -9,16 +9,28 @@
 
 <view class="weui-panel weui-panel_access">
     <view class="weui-panel__bd">
-        <view class="weui-media-box weui-media-box_text" style='background-color:#ACD6FF' bindtap='nodev'>
+        <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF' bindtap='nodev'>
             <view class="weui-media-box__title weui-media-box__title_in-text">
                 <text decode='false'>用户资料 &gt;</text>
             </view>
         </view>
         <view wx:if="{{userInfo.isAthlete==1}}">
-            <view class="weui-media-box weui-media-box_text" style='background-color:#ACD6FF' bindtap='nodev'>
+            <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF' bindtap='nodev'>
                 <view class="weui-media-box__title weui-media-box__title_in-text">
                     <text decode='false'>运动员资料 &gt;</text>
                 </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<text>\n</text>
+
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF' bindtap='logout'>
+            <view class="weui-media-box__title weui-media-box__title_in-text">
+                <text decode='false'>登出 &gt;</text>
             </view>
         </view>
     </view>

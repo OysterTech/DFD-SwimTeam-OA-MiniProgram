@@ -64,11 +64,32 @@ Page({
 
     },
 
-    nodev:function(){
+    nodev: function () {
         wx.showModal({
             title: '提示',
             content: '修改资料功能暂未开放！请登录网页端修改！',
-            showCancel:false
+            showCancel: false
+        })
+    },
+
+    logout: function () {
+        var _this=this;
+        wx.request({
+            url: app.data.API_HOST + 'userLogout.php',
+            method: "POST",
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            data:{
+                openId: wx.getStorageSync('openID')
+            },
+            success: function (res) {
+                console.log(res.data);
+                wx.clearStorageSync();
+                wx.redirectTo({
+                    url: "/pages/user/login"
+                })
+            }
         })
     }
 })

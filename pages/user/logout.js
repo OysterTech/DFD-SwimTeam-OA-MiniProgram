@@ -1,4 +1,4 @@
-// pages/tools/index.js
+// pages/user/logout.js
 Page({
 
   /**
@@ -62,13 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  nodev: function () {
-      wx.showModal({
-          title: '提示',
-          content: '此功能暂未开放！敬请期待！',
-          showCancel: false
-      })
-  },
+  }
 })

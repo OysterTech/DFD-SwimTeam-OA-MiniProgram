@@ -11,7 +11,7 @@
 </view>
 
 <view wx:if="{{info.FileJSON!=null}}" class='title'>
-此通知有附件，请登录网页版下载！
+    此通知有附件，请登录网页版下载！
 </view>
 
 <button bindtap='goBack'>

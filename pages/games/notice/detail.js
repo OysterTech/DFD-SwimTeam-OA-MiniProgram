@@ -42,11 +42,11 @@ Page({
                     success: function (res) {
                         _this.setData({
                             info: res.data.data,
-                            content:res.data.data.Content
+                            content: res.data.data.Content
                         });
                         wx.hideLoading();
                         console.log(_this.data.info);
-                        wxparse.wxParse('content', 'html',_this.data.content,_this, 5);
+                        wxparse.wxParse('content', 'html', _this.data.content, _this, 5);
                     }
                 });
             }
@@ -80,7 +80,7 @@ Page({
     onUnload: function () {
 
     },
-    
+
     goBack: function () {
         wx.navigateBack({})
     }
