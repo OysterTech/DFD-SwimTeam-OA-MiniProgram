@@ -17,13 +17,12 @@
         </view>
     </view>
 
-    <text>\n</text>
-    <button type='primary' form-type='submit'>
+    <button class="weui-btn-area" type='primary' form-type='submit'>
         <text decode='true'>确认报名 &gt;</text>
     </button>
-
-    <text>\n</text>
-    <button bindtap='goBack'>
+    <button class="weui-btn-area" bindtap='goBack'>
         <text decode='true'>&lt; 返回比赛</text>
     </button>
 </form>
+
+<include src="/pages/include/footer.wxml" />

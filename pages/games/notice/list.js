@@ -32,7 +32,6 @@ Page({
                             noticeList: res.data.data
                         });
                         wx.hideLoading();
-                        console.log(_this.data.noticeList);
                     }
                 });
             }
@@ -65,5 +64,9 @@ Page({
      */
     onUnload: function () {
 
+    },
+
+    goBack: function () {
+        wx.navigateBack({})
     }
 })

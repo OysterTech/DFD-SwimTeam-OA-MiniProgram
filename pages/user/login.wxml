@@ -1,9 +1,9 @@
 <!--pages/user/login.wxml-->
 <view class='text_center'>
     <text>
-        欢迎登录
-        广州市东风东路小学游泳队管理系统
-    
+    欢迎登录
+    广州市东风东路小学游泳队管理系统
+
     </text>
 </view>
 
@@ -27,12 +27,10 @@
     </view>
 
     <text>\n</text>
-    <button type='primary' form-type="submit">登录 / Login ></button>
+    <button class="weui-btn-area" type='primary' form-type="submit">登录 / Login ></button>
 
 </form>
 
-<text>\n</text>
-<button type='primary' bindtap='toAuth'>微信授权登录 / Authorize ></button>
-
+<button class="weui-btn-area" type='primary' bindtap='toAuth'>微信授权登录 / Authorize ></button>
 
 <include src="/pages/include/footer.wxml" />

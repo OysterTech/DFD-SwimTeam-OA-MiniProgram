@@ -1,0 +1,24 @@
+<!--pages/enroll/viewEnrollItem.wxml-->
+<view class="weui-form-preview">
+    <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">比赛名称</view>
+            <view class="weui-form-preview__value_in-hd">{{gamesName}}</view>
+        </view>
+    </view>
+    <view class="weui-form-preview__bd">
+        <block wx:for="{{itemList}}" wx:for-item="info" wx:key="*this" wx:for-index="index">
+            <view class="weui-form-preview__item">
+                <view class="weui-form-preview__label">比赛项目 {{index+1}}</view>
+                <view class="weui-form-preview__value">{{info}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="weui-form-preview__ft">
+        <navigator open-type='navigateBack' class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+            <text decode='true'>&lt; 返回比赛</text>
+        </navigator>
+    </view>
+</view>
+
+<include src="/pages/include/footer.wxml" />

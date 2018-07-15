@@ -35,6 +35,7 @@ Page({
                         YearGroup: userInfo.YearGroup
                     },
                     success: function (res) {
+                        wx.hideLoading();
                         if (res.data.code == 0) {
                             wx.showModal({
                                 title: '提示',
@@ -50,7 +51,6 @@ Page({
                             _this.setData({
                                 itemList: res.data.data
                             });
-                            wx.hideLoading();
                         }
                     }
                 });
@@ -143,7 +143,7 @@ Page({
                                             "value": userInfo.RealName
                                         },
                                         "keyword5": {
-                                            "value": "项目"
+                                            "value": "详情请打开小程序查看"
                                         },
                                         "keyword6": {
                                             "value": grade
@@ -180,7 +180,7 @@ Page({
                                                 content: '报名成功！请等待领队通知！',
                                                 showCancel: false,
                                                 success: function (res) {
-                                                    if(res.confirm){
+                                                    if (res.confirm) {
                                                         wx.navigateBack({});
                                                     }
                                                 }
@@ -207,7 +207,7 @@ Page({
     },
 
     checkboxChange: function (e) {
-        console.log(e.detail.value)
+        console.log(e.detail)
         this.setData({
             itemIds: e.detail.value
         });

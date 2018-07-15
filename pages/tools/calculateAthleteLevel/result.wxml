@@ -1,0 +1,34 @@
+<!--pages/tools/calculateAthleteLevel/result.wxml-->
+<view class="table">
+    <view class="tr">
+        <view class="itemName">{{itemName}}</view>
+    </view>
+    <view class="tr">
+        <view class="level">您的成绩级别：{{levelName[level]}}</view>
+    </view>
+    <block wx:for="{{scoreList}}" wx:for-item="info" wx:key="*this" wx:for-index="index">
+        <block wx:if="{{level == index}}">
+            <view class="tr">
+                <view class='yourScore'>
+                    <image class="weui-media-box__thumb" src="../../../images/icons/level.png" />
+                </view>
+                <view class='yourScore'>{{levelName[index]}}</view>
+                <view class='yourScore'>{{score_beauty}}</view>
+            </view>
+        </block>
+        <view class="tr">
+            <view class='td'>{{index+1}}</view>
+            <view class='td'>{{levelName[index]}}</view>
+            <view class='td'>{{info}}</view>
+        </view>
+    </block>
+    <block wx:if="{{level ==5}}">
+        <view class="tr">
+            <view class='yourScore'></view>
+            <view class='yourScore'>您的成绩</view>
+            <view class='yourScore'>{{score_beauty}}</view>
+        </view>
+    </block>
+</view>
+
+<include src="/pages/include/footer.wxml" />

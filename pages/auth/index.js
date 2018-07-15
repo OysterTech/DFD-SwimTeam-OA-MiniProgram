@@ -22,7 +22,7 @@ Page({
                                     code: res.code
                                 },
                                 success: function (data) {
-                                    console.log(data.data.data.openID)
+                                    //console.log(data.data.data.openID)
                                     var info = data.data;
                                     wx.setStorageSync('openID', info.data.openID);
                                     wx.setStorageSync('userCode', res.code);
@@ -50,7 +50,7 @@ Page({
                                         if (options.from == "loginButton") {
                                             wx.showModal({
                                                 title: '提示',
-                                                content: '当前微信未绑定系统用户，请先用帐密登录！',
+                                                content: '当前微信未绑定系统用户或用户已被其他微信绑定，请重新用帐密登录！',
                                                 showCancel: false,
                                                 success: function (res) {
                                                     if (res.confirm) {

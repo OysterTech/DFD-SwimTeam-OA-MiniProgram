@@ -14,7 +14,7 @@
     此通知有附件，请登录网页版下载！
 </view>
 
-<button bindtap='goBack'>
+<button class='weui-btn-area' bindtap='goBack'>
     <text decode='true'>&lt; 返回上一页</text>
 </button>
 

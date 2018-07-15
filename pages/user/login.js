@@ -2,16 +2,14 @@ var app = getApp();
 
 Page({
 
-    data: {
-    },
+    data: {},
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-    },
+    onLoad: function(options) {},
 
-    toLogin: function (e) {
+    toLogin: function(e) {
         var userName = e.detail.value.userName;
         var password = e.detail.value.password;
 
@@ -36,7 +34,7 @@ Page({
         wx.showLoading({
             title: '登录中',
             mask: 'true',
-            success: function (a) {
+            success: function(a) {
                 wx.request({
                     url: app.data.API_HOST + 'userLogin.php',
                     method: "POST",
@@ -48,7 +46,7 @@ Page({
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
                     },
-                    success: function (res) {
+                    success: function(res) {
                         console.log(res.data);
 
                         // 服务器无法正常响应
@@ -59,7 +57,7 @@ Page({
                                 title: '提示',
                                 content: '登录失败！请联系管理员并提交错误码：UL9！',
                                 showCancel: false,
-                                success: function (res) { }
+                                success: function(res) {}
                             });
                             return false;
                         }
@@ -96,7 +94,7 @@ Page({
             }
         });
     },
-    toAuth: function () {
+    toAuth: function() {
         wx.redirectTo({
             url: '/pages/auth/index?from=loginButton',
         })

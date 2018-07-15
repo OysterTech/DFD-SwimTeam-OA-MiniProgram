@@ -1,4 +1,3 @@
-// pages/games/detail.js
 Page({
 
     /**
@@ -13,8 +12,6 @@ Page({
      */
     onLoad: function(options) {
         this.setData({
-            venue: options.venue,
-            startDate: options.startDate,
             gamesName: wx.getStorageSync("gamesName")
         })
     },

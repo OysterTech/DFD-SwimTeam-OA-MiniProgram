@@ -2,6 +2,8 @@
     "pages": [
         "pages/auth/index",
         "pages/user/info",
+        "pages/user/updateUserInfo",
+        "pages/user/updateAthleteInfo",
         "pages/user/login",
         "pages/user/logout",
         "pages/games/index",
@@ -10,12 +12,13 @@
         "pages/games/notice/list",
         "pages/games/notice/detail",
         "pages/enroll/chooseItem",
+        "pages/enroll/viewEnrollItem",
         "pages/tools/index",
         "pages/tools/calculateAthleteLevel/index",
+        "pages/tools/calculateAthleteLevel/result",
         "pages/logs/logs",
         "pages/include/footer",
-        "pages/user/updateUserInfo",
-        "pages/user/updateAthleteInfo"
+        "pages/aboutMe"
     ],
     "window": {
         "navigationBarBackgroundColor": "#118fff",

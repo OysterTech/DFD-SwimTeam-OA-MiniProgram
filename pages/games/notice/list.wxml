@@ -21,4 +21,8 @@
     <!-- [end]没有通知的提醒 -->
 </view>
 
+<button class="weui-btn-area" bindtap='goBack'>
+    <text decode='true'>&lt; 返回比赛</text>
+</button>
+
 <include src="/pages/include/footer.wxml" />

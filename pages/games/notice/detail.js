@@ -20,7 +20,6 @@ Page({
         wx.getSystemInfo({
             success: function (res) {
                 let winHeight = res.windowHeight;
-                console.log(winHeight);
                 winPage.setData({
                     dkheight: winHeight - winHeight * 0.05 - 80
                 })
@@ -45,7 +44,6 @@ Page({
                             content: res.data.data.Content
                         });
                         wx.hideLoading();
-                        console.log(_this.data.info);
                         wxparse.wxParse('content', 'html', _this.data.content, _this, 5);
                     }
                 });
@@ -64,20 +62,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
 
     },
 

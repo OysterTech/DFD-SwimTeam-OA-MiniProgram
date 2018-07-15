@@ -1,2 +1,94 @@
 <!--pages/user/updateAthleteInfo.wxml-->
-<text>pages/user/updateAthleteInfo.wxml</text>
+<text decode='false'>\n</text>
+<view class="container">
+    <view class="page-body">
+        <form catchsubmit="formSubmit">
+        
+            <view class="page-section">
+                <view class="page-section-title">真实姓名</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="RealName" value='{{userInfo.RealName}}' />
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="page-section">
+                <view class="page-section-title">手机号</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="Phone" type='number' maxlength='11' value='{{userInfo.Phone}}' />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="page-section">
+                <view class="page-section-title">年级</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <picker name="SchoolGrade" bindchange="gradeChange" value='{{schoolGrade-1}}' range="{{schoolGradeList}}">
+                                <view class="weui-input">{{schoolGradeList[schoolGrade-1]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="page-section">
+                <view class="page-section-title">班级</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <picker name="SchoolClass" bindchange="classChange" value="{{schoolClass-1}}" range="{{schoolClassList}}">
+                                <view class="weui-input">{{schoolClassList[schoolClass-1]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="page-section">
+                <view class="page-section-title">性别</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <picker name="Sex" bindchange="sexChange" value='{{sex-1}}' range="{{sexList}}">
+                                <view class="weui-input">{{sexList[sex-1]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="page-section">
+                <view class="page-section-title">证件类型</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <picker name="IDCardType" bindchange="typeChange" value='{{IDCardType-1}}' range="{{idCardTypeList}}">
+                                <view class="weui-input">{{idCardTypeList[IDCardType-1]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="page-section">
+                <view class="page-section-title">证件号</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="IDCard" maxlength="18" value='{{userInfo.IDCard}}' />
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="btn-area">
+                <button class="weui-btn-area" type="primary" formType="submit">确 认 修 改</button>
+            </view>
+        </form>
+    </view>
+</view>
+
+<include src="/pages/include/footer.wxml" />

@@ -1,42 +1,41 @@
 const app = getApp();
 
 Page({
-    data: {
-    },
+    data: {},
 
-    onLoad: function () {
+    onLoad: function() {
         this.getAllGames();
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
 
     },
 
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
         var _this = this;
-        _this.data.gamesList=[]
+        _this.data.gamesList = []
         var status = _this.getAllGames();
         if (status == true) {
             wx.stopPullDownRefresh();
         }
     },
 
-    getAllGames: function () {
+    getAllGames: function() {
         var _this = this;
         wx.showLoading({
             title: '比赛数据加载中',
             mask: 'true',
-            success: function (a) {
+            success: function(a) {
                 wx.request({
                     url: app.data.API_HOST + 'getAllGames.php',
                     header: {
                         'content-type': 'application/json'
                     },
-                    success: function (res) {
-                        console.log(res.data.data);
+                    success: function(res) {
+                        // console.log(res.data.data);
                         _this.setData({
                             gamesList: res.data.data
                         });

@@ -6,13 +6,13 @@
 
 ## 简介
 
-▲ 主要功能：获取比赛资讯、计算运动员等级（通过微信小程序）
+▲ 主要功能：比赛报名、获取比赛资讯、计算运动员等级（通过微信小程序）
 
 ▲ 开发商：生蚝科技
 
 ▲ 被授权方：广州市越秀区东风东路小学游泳队
 
-▲ 系统版本信息：***Build 180630***
+▲ 系统版本信息：***Build 180715***
 
 ---
 
@@ -20,7 +20,7 @@
 
 ▲ ***（必需）*** [`小程序API`](https://github.com/SmallOyster/DFD-SwimTeam-OA-API)
 
-▲ [`网页版`](https://github.com/SmallOyster/DFD-SwimTeam-OA)
+▲ ***（可选）*** [`网页版`](https://github.com/SmallOyster/DFD-SwimTeam-OA)
 
 ---
 
