@@ -10,7 +10,7 @@
         <block wx:for="{{itemList}}" wx:for-item="info" wx:key="*this" wx:for-index="index">
             <view class="weui-form-preview__item">
                 <view class="weui-form-preview__label">比赛项目 {{index+1}}</view>
-                <view class="weui-form-preview__value">{{info}}</view>
+                <view class="weui-form-preview__value">{{info.ItemName}}</view>
             </view>
         </block>
     </view>

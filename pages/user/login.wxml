@@ -26,7 +26,6 @@
         </view>
     </view>
 
-    <text>\n</text>
     <button class="weui-btn-area" type='primary' form-type="submit">登录 / Login ></button>
 
 </form>
