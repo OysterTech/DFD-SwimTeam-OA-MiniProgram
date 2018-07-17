@@ -12,7 +12,13 @@
 
 ▲ 被授权方：广州市越秀区东风东路小学游泳队
 
-▲ 系统版本信息：***Build 180715***
+▲ 代码版本信息：***Build 180715***
+
+▲ 系统版本信息：***V1.0.0.B1***
+
+▲ 官方微信小程序码（已发布版）：
+
+![avatar](https://github.com/SmallOyster/DFD-SwimTeam-OA-MiniProgram/blob/master/miniAppCode.jpg)
 
 ---
 
