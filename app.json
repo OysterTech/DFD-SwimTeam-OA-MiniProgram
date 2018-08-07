@@ -6,6 +6,7 @@
         "pages/user/updateAthleteInfo",
         "pages/user/login",
         "pages/user/logout",
+        "pages/user/reg",
         "pages/games/index",
         "pages/games/info",
         "pages/games/detail",
@@ -16,9 +17,9 @@
         "pages/tools/index",
         "pages/tools/calculateAthleteLevel/index",
         "pages/tools/calculateAthleteLevel/result",
-        "pages/logs/logs",
         "pages/include/footer",
-        "pages/aboutMe"
+        "pages/me/aboutMe",
+        "pages/me/contactMe"
     ],
     "window": {
         "navigationBarBackgroundColor": "#118fff",

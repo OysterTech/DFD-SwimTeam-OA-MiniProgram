@@ -32,4 +32,6 @@
 
 <button class="weui-btn-area" type='primary' bindtap='toAuth'>微信授权登录 / Authorize ></button>
 
+<button class="weui-btn-area" bindtap='toReg'>运动员注册 / Reg ></button>
+
 <include src="/pages/include/footer.wxml" />

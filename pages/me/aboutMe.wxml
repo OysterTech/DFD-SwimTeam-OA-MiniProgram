@@ -14,11 +14,11 @@
 <text decode='false'>\n\n</text>
 
 <text decode='false'>下附小生蚝的赞赏码，嘻嘻~（点击放大后长按扫描即可~）</text>
-<image src='../images/supportMe.jpg' bindtap='showZan'></image>
+<image src='../../images/supportMe.jpg' bindtap='showZan'></image>
 
 <text decode='false'>\n\n</text>
 
-<text decode='false'>也欢迎关注我的ITRClub公众号哈~（方法同上）</text>
-<image src='../images/ITRClubWxCode.jpg' bindtap='showITR'></image>
+<text decode='false'>也欢迎关注我的ITRClub公众号哈~（亦可在公众号搜索ITRClub）</text>
+<image src='../../images/ITRClubWxCode.jpg' bindtap='showITR'></image>
 
 <include src="/pages/include/footer.wxml" />

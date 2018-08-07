@@ -48,11 +48,11 @@ Page({
                     },
                     success: function(res) {
                         console.log(res.data);
+                        wx.hideLoading();
+                        wx.hideNavigationBarLoading();
 
                         // 服务器无法正常响应
                         if (res.statusCode != 200) {
-                            wx.hideLoading();
-                            wx.hideNavigationBarLoading();
                             wx.showModal({
                                 title: '提示',
                                 content: '登录失败！请联系管理员并提交错误码：UL9！',
@@ -61,13 +61,10 @@ Page({
                             });
                             return false;
                         }
-                        wx.hideLoading();
-                        wx.hideNavigationBarLoading();
+
                         var data = res.data;
                         if (data.code == 403 || data.code == 0) {
                             // 密码错误
-                            wx.hideLoading();
-                            wx.hideNavigationBarLoading();
                             wx.showModal({
                                 title: '提示',
                                 content: '密码错误！请重新输入！',
@@ -76,8 +73,6 @@ Page({
                             return false;
                         } else if (data.code == 2) {
                             // 绑定微信失败
-                            wx.hideLoading();
-                            wx.hideNavigationBarLoading();
                             wx.showModal({
                                 title: '提示',
                                 content: '用户绑定微信失败！如已绑定，请点击“微信授权登录”！',
@@ -96,7 +91,12 @@ Page({
     },
     toAuth: function() {
         wx.redirectTo({
-            url: '/pages/auth/index?from=loginButton',
+            url: '/pages/auth/index?from=loginButton'
+        })
+    },
+    toReg:function(){
+        wx.navigateTo({
+            url: '/pages/user/reg'
         })
     }
 })

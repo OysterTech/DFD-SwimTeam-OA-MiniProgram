@@ -17,12 +17,12 @@ Page({
 
     showZan: function () {
         wx.previewImage({
-            urls: ["https://api.xshgzs.com/dfd/images/supportMe.jpg"] // 需要预览的图片http链接列表
+            urls: ["https://api.xshgzs.com/dfd/images/supportMe.jpg"]
         })
     },
     showITR: function () {
         wx.previewImage({
-            urls: ["https://api.xshgzs.com/dfd/images/ITRClubWxCode.jpg"] // 需要预览的图片http链接列表
+            urls: ["https://api.xshgzs.com/dfd/images/ITRClubWxCode.jpg"]
         })
     }
 })

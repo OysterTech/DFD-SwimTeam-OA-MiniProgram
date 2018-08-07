@@ -1,5 +1,8 @@
 <text>\n</text>
 <view class="weui-footer">
-    <view class="weui-footer__text">Copyright © 2014-2018 生蚝科技</view>
+    <view class="weui-footer__text">Copyright © 2014-2018 生蚝科技 (V1.1)</view>
+    <navigator url='/pages/me/contactMe'>
+        <view class="weui-footer__text" style="color:green">点此联系管理员</view>
+    </navigator>
 </view>
 <text>\n</text>

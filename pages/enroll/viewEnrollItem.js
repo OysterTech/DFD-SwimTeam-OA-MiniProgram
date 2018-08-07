@@ -15,6 +15,10 @@ Page({
         var _this = this;
         var userInfo = wx.getStorageSync('userInfo');
 
+        wx.setNavigationBarTitle({
+            title: "查看报名项目 / " + wx.getStorageSync("gamesName")
+        })
+
         wx.request({
             url: app.data.API_HOST + 'getGamesEnrollItem.php',
             method: "POST",
@@ -33,34 +37,6 @@ Page({
                 })
             }
         });
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function() {
-
     },
 
     goBack: function() {

@@ -43,6 +43,9 @@ Page({
                             info: res.data.data,
                             content: res.data.data.Content
                         });
+                        wx.setNavigationBarTitle({
+                            title: res.data.data.Title
+                        })
                         wx.hideLoading();
                         wxparse.wxParse('content', 'html', _this.data.content, _this, 5);
                     }
