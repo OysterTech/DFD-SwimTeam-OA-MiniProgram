@@ -2,17 +2,6 @@ var app = getApp();
 var util = require('../../utils/util.js');
 
 Page({
-
-    /**
-     * 页面的初始数据
-     */
-    data: {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function(options) {
         var _this = this;
         var userInfo = wx.getStorageSync('userInfo');
@@ -36,7 +25,8 @@ Page({
                     },
                     data: {
                         GamesID: options.gamesID,
-                        YearGroup: userInfo.YearGroup
+                        YearGroup: userInfo.YearGroup,
+                        userId: userInfo.UserID
                     },
                     success: function(res) {
                         wx.hideLoading();
@@ -47,6 +37,23 @@ Page({
                                 showCancel: false,
                                 success: function(res) {
                                     if (res.confirm) {
+                                        _this.setData({
+                                            no: 1
+                                        })
+                                        wx.navigateBack({});
+                                    }
+                                }
+                            });
+                        } else if (res.data.code == 2) {
+                            wx.showModal({
+                                title: '提示',
+                                content: '抱歉！您暂无权限报名此比赛！',
+                                showCancel: false,
+                                success: function(res) {
+                                    if (res.confirm) {
+                                        _this.setData({
+                                            no: 1
+                                        })
                                         wx.navigateBack({});
                                     }
                                 }
@@ -64,12 +71,14 @@ Page({
 
     onUnload: function() {
         if (this.data.isEnroll != 1) {
-            wx.showModal({
-                title: '提示',
-                content: '报名数据未保存，请您悉知！',
-                showCancel: false,
-                success: function(res) {}
-            });
+            if (this.data.no != 1){
+                wx.showModal({
+                    title: '提示',
+                    content: '报名数据未保存，请您悉知！',
+                    showCancel: false,
+                    success: function(res) {}
+                });
+            }
         }
     },
 

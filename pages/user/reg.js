@@ -30,7 +30,7 @@ Page({
             'schoolClass': 1,
             'IDCardType': 1,
             'sex': 1,
-            'YearGroup': i-1,
+            'YearGroup': i - 1,
             'YearGroupList': YearGroupList
         });
     },
@@ -71,11 +71,47 @@ Page({
     toReg: function(e) {
         var _this = this;
         var value = e.detail.value;
+        var reg = /[\u4e00-\u9fa5]/g;
+
+        // 检查用户名是否含有汉字
+        if (reg.test(value.userName)) {
+            wx.showModal({
+                title: '提示',
+                content: '注册失败！用户名不得含有汉字！',
+                showCancel: false,
+                success: function(res) {}
+            });
+            return;
+        }
+
+        // 检查用户名是否含有空格
+        if (value.userName.indexOf(" ") != -1) {
+            wx.showModal({
+                title: '提示',
+                content: '注册失败！用户名不得含有空格！',
+                showCancel: false,
+                success: function(res) {}
+            });
+            return;
+        }
+
         value.Sex = _this.data.sexList[value.Sex];
         value.SchoolGrade = parseInt(value.SchoolGrade) + 1;
         value.SchoolClass = parseInt(value.SchoolClass) + 1;
         value.IDCardType = parseInt(value.IDCardType) + 1;
-        value.YearGroup=this.data.YearGroupList[parseInt(value.YearGroup)];
+        value.YearGroup = this.data.YearGroupList[parseInt(value.YearGroup)];
+
+        // 检查大陆身份证是否为18位
+        if (value.IDCardType == 1 && value.IDCard.length != 18) {
+            wx.showModal({
+                title: '提示',
+                content: '注册失败！大陆二代身份证号码长度有误！',
+                showCancel: false,
+                success: function(res) {}
+            });
+            return;
+        }
+
         value = JSON.stringify(value);
         wx.showLoading({
             title: '注册中',

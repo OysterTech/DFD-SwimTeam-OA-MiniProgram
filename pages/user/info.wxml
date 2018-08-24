@@ -31,13 +31,11 @@
 
 <view class="weui-panel weui-panel_access">
     <view class="weui-panel__bd">
-        <navigator url='/pages/user/logout'>
-            <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF'>
-                <view class="weui-media-box__title weui-media-box__title_in-text">
-                    <text decode='false'>登出 &gt;</text>
-                </view>
+        <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF' bindtap='logout'>
+            <view class="weui-media-box__title weui-media-box__title_in-text">
+                <text decode='false'>登出 &gt;</text>
             </view>
-        </navigator>
+        </view>
     </view>
 </view>
 

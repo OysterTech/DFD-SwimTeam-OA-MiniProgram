@@ -27,7 +27,7 @@ Page({
             success: function (res) {
                 wx.clearStorageSync();
                 wx.redirectTo({
-                    url: "/pages/auth/index"
+                    url: "/pages/user/login"
                 })
             }
         })

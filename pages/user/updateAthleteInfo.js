@@ -31,9 +31,9 @@ Page({
 
         this.setData({
             'userInfo': userInfo,
-            'schoolGrade':schoolGrade,
-            'schoolClass':schoolClass,
-            'IDCardType':IDCardType,
+            'schoolGrade': schoolGrade,
+            'schoolClass': schoolClass,
+            'IDCardType': IDCardType,
             'sex': sexNum
         });
     },
@@ -45,34 +45,70 @@ Page({
 
     },
 
-    gradeChange: function (e) {
+    gradeChange: function(e) {
         this.setData({
-            schoolGrade: parseInt(e.detail.value)+1
+            schoolGrade: parseInt(e.detail.value) + 1
         })
     },
-    classChange: function (e) {
+    classChange: function(e) {
         this.setData({
-            schoolClass: parseInt(e.detail.value)+1
+            schoolClass: parseInt(e.detail.value) + 1
         })
     },
-    sexChange: function (e) {
+    sexChange: function(e) {
         this.setData({
-            sex: parseInt(e.detail.value)+1
+            sex: parseInt(e.detail.value) + 1
         })
     },
-    typeChange: function (e) {
+    typeChange: function(e) {
         this.setData({
-            IDCardType: parseInt(e.detail.value)+1
+            IDCardType: parseInt(e.detail.value) + 1
         })
     },
 
     formSubmit: function(e) {
         var _this = this;
         var value = e.detail.value;
+        var reg = /[\u4e00-\u9fa5]/g;
+
+        // 检查真实姓名是否含有非汉字字符
+        if (!reg.test(value.RealName)) {
+            wx.showModal({
+                title: '提示',
+                content: '注册失败！真实姓名不得含有非汉字字符！',
+                showCancel: false,
+                success: function(res) {}
+            });
+            return;
+        }
+
+        // 检查真实姓名是否含有空格
+        if (value.RealName.indexOf(" ") != -1) {
+            wx.showModal({
+                title: '提示',
+                content: '注册失败！用户名不得含有空格！',
+                showCancel: false,
+                success: function(res) {}
+            });
+            return;
+        }
+
         value.Sex = _this.data.sexList[value.Sex];
         value.SchoolGrade = parseInt(value.SchoolGrade) + 1;
         value.SchoolClass = parseInt(value.SchoolClass) + 1;
         value.IDCardType = parseInt(value.IDCardType) + 1;
+
+        // 检查大陆身份证是否为18位
+        if (value.IDCardType == 1 && value.IDCard.length != 18) {
+            wx.showModal({
+                title: '提示',
+                content: '注册失败！大陆二代身份证号码长度有误！',
+                showCancel: false,
+                success: function (res) { }
+            });
+            return;
+        }
+        
         value = JSON.stringify(value);
         wx.showLoading({
             title: '修改中',
