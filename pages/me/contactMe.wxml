@@ -1,45 +1,60 @@
 <!--pages/me/contactMe.wxml-->
+
+<view class='text_center'>
+  <text>
+    如在使用过程中有任何问题
+    欢迎在下方填单提问
+    
+    亦可关注公众号“生蚝科技”
+    发送“DFD”+您的留言内容即可
+    我们会在3日内回复您
+    
+    （建议使用公众号留言方法
+    因填单支持的回访方式较少）
+    </text>
+</view>
+
 <form report-submit bindsubmit="submit">
-    <view class="page-section">
-        <view class="weui-cells__title">运动员姓名</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <input name="realName" class="weui-input" auto-focus placeholder="请输入运动员姓名" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">运动员姓名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="realName" class="weui-input" auto-focus placeholder="请输入运动员姓名" />
+      </view>
     </view>
+  </view>
 
-    <view class="page-section">
-        <view class="weui-cells__title">内容</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <textarea name="content" class="weui-textarea" placeholder="请输入内容" style="height: 5em" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">内容</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <textarea name="content" class="weui-textarea" placeholder="请输入内容" style="height: 5em" />
+      </view>
     </view>
+  </view>
 
-    <view class="page-section">
-        <view class="page-section-title">联系方式</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <picker name="contactType" bindchange="contactTypeChange" value='{{contactType-1}}' range="{{contactTypeList}}">
-                        <view class="weui-input">{{contactTypeList[contactType-1]}}</view>
-                    </picker>
-                </view>
-            </view>
+  <view class="page-section">
+    <view class="page-section-title">联系方式</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <picker name="contactType" bindchange="contactTypeChange" value='{{contactType-1}}' range="{{contactTypeList}}">
+            <view class="weui-input">{{contactTypeList[contactType-1]}}</view>
+          </picker>
         </view>
+      </view>
     </view>
+  </view>
 
-    <view class="page-section">
-        <view class="weui-cells__title">联系号码</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <input name="contactNum" class="weui-input" placeholder="请输入联系号码以便回访" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">联系号码</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="contactNum" class="weui-input" placeholder="请输入联系号码以便回访" />
+      </view>
     </view>
+  </view>
 
-    <button class="weui-btn-area" type='primary' form-type="submit">提 交 ></button>
+  <button class="weui-btn-area" type='primary' form-type="submit">提 交 ></button>
 
 </form>

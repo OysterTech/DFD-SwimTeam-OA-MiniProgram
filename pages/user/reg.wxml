@@ -1,6 +1,6 @@
 <!--pages/user/login.wxml-->
 <view class='text_center'>
-    <text>
+  <text>
     欢迎注册
     广州市东风东路小学游泳队管理系统
 
@@ -8,116 +8,116 @@
 </view>
 
 <form report-submit bindsubmit="toReg">
-    <view class="page-section">
-        <view class="weui-cells__title">用户名</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <input name="userName" class="weui-input" auto-focus placeholder="请输入登录用户名" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">用户名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="userName" class="weui-input" auto-focus placeholder="请输入登录用户名" />
+      </view>
     </view>
+  </view>
 
-    <view class="page-section">
-        <view class="weui-cells__title">密码</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <input name="password" class="weui-input" password placeholder="请输入用户登录密码" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">密码</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="password" class="weui-input" password placeholder="请输入用户登录密码" />
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">真实姓名</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="RealName" placeholder="请输入运动员真实姓名" />
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">真实姓名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="RealName" placeholder="请输入运动员真实姓名" />
         </view>
+      </view>
     </view>
+  </view>
 
-    <view class="page-section">
-        <view class="page-section-title">手机号</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="Phone" type='number' maxlength='11' placeholder="请输入家长的手机号码" />
-                </view>
-            </view>
+  <view class="page-section">
+    <view class="page-section-title">手机号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="Phone" type='number' maxlength='11' placeholder="请输入家长的手机号码" />
         </view>
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">年级</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <picker name="SchoolGrade" bindchange="gradeChange" value='{{schoolGrade-1}}' range="{{schoolGradeList}}">
-                        <view class="weui-input">{{schoolGradeList[schoolGrade-1]}}</view>
-                    </picker>
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">年级</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <picker name="SchoolGrade" bindchange="gradeChange" value='{{schoolGrade-1}}' range="{{schoolGradeList}}">
+            <view class="weui-input">{{schoolGradeList[schoolGrade-1]}}</view>
+          </picker>
         </view>
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">班级</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <picker name="SchoolClass" bindchange="classChange" value="{{schoolClass-1}}" range="{{schoolClassList}}">
-                        <view class="weui-input">{{schoolClassList[schoolClass-1]}}</view>
-                    </picker>
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">班级</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <picker name="SchoolClass" bindchange="classChange" value="{{schoolClass-1}}" range="{{schoolClassList}}">
+            <view class="weui-input">{{schoolClassList[schoolClass-1]}}</view>
+          </picker>
         </view>
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">性别</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <picker name="Sex" bindchange="sexChange" value='{{sex-1}}' range="{{sexList}}">
-                        <view class="weui-input">{{sexList[sex-1]}}</view>
-                    </picker>
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">性别</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <picker name="Sex" bindchange="sexChange" value='{{sex-1}}' range="{{sexList}}">
+            <view class="weui-input">{{sexList[sex-1]}}</view>
+          </picker>
         </view>
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">证件类型</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <picker name="IDCardType" bindchange="typeChange" value='{{IDCardType-1}}' range="{{idCardTypeList}}">
-                        <view class="weui-input">{{idCardTypeList[IDCardType-1]}}</view>
-                    </picker>
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">证件类型</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <picker name="IDCardType" bindchange="typeChange" value='{{IDCardType-1}}' range="{{idCardTypeList}}">
+            <view class="weui-input">{{idCardTypeList[IDCardType-1]}}</view>
+          </picker>
         </view>
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">证件号</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <input class="weui-input" name="IDCard" maxlength="18" placeholder="请输入证件号码" />
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">证件号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="IDCard" maxlength="18" placeholder="请输入证件号码" />
         </view>
+      </view>
     </view>
-    <view class="page-section">
-        <view class="page-section-title">出生年份</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <picker name="YearGroup" bindchange="YearGroupChange" range="{{YearGroupList}}">
-                        <view class="weui-input">{{YearGroupList[YearGroup]}}</view>
-                    </picker>
-                </view>
-            </view>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title">出生年份</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <picker name="YearGroup" bindchange="YearGroupChange" range="{{YearGroupList}}">
+            <view class="weui-input">{{YearGroupList[YearGroup]}}</view>
+          </picker>
         </view>
+      </view>
     </view>
+  </view>
 
-    <button class="weui-btn-area" type='primary' form-type="submit">注册 / Reg ></button>
+  <button class="weui-btn-area" type='primary' form-type="submit">注册 / Reg ></button>
 
 </form>
 

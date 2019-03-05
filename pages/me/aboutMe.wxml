@@ -1,24 +1,19 @@
 <!--pages/aboutMe.wxml-->
 <text decode='false'>\n</text>
 
-<text decode='false'>“东风东游泳队”小程序是由生蚝科技开发。</text>
+<text decode='false'>“东风东游泳队”小程序是由广州市生蚝科技有限公司（原“生蚝科技”）开发。</text>
 
 <text decode='false'>\n\n</text>
 
-<text decode='false'>生蚝科技 是广州市某中学生（昵称小生蚝）一手创办的个人工作室，专做科技项目。小生蚝还联手其他同学创建了ITRClub，欢迎各位关注！</text>
+<text decode='false'>生蚝科技 是广州市一中学生（原东风东路小学学生）小生蚝同学一手创办的科技企业，主营开发各类科技项目，旨在更简洁方便大众的生活。</text>
 
 <text decode='false'>\n\n</text>
 
-<text decode='false'>由于资金短缺，无法请他人开发。所以只由小生蚝一人开发，界面、功能等其他内容可能会有漏洞，敬请原谅！您亦可向小生蚝提出建议反馈哦~也希望各位可以赞助一下我哈~（提意见请移步网页端的“提交工单”）</text>
+<text decode='false'>由于资金短缺，无法请他人开发。所以只由小生蚝一人开发，界面、功能等其他内容可能会有漏洞，敬请原谅！您亦可向小生蚝提出建议反馈哦~也希望各位可以资助一下我哈~</text>
 
 <text decode='false'>\n\n</text>
 
-<text decode='false'>下附小生蚝的赞赏码，嘻嘻~（点击放大后长按扫描即可~）</text>
+<text decode='false'>下附小生蚝的资助码，嘻嘻~（点击放大后长按扫描即可~）</text>
 <image src='../../images/supportMe.jpg' bindtap='showZan'></image>
-
-<text decode='false'>\n\n</text>
-
-<text decode='false'>也欢迎关注我的ITRClub公众号哈~（亦可在公众号搜索ITRClub）</text>
-<image src='../../images/ITRClubWxCode.jpg' bindtap='showITR'></image>
 
 <include src="/pages/include/footer.wxml" />

@@ -1,67 +1,67 @@
 <!--pages/tools/calculateAthleteLevel/index.wxml-->
 <text decode='false'>\n</text>
 <view class="container">
-    <view class="page-body">
-        <form catchsubmit="search">
-            <view class="page-section page-section-gap">
-                <view class="page-section-title">性别</view>
-                <radio-group name="sex">
-                    <label>
-                        <radio value="man" />男
-                    </label>
-                    <text>\n</text>
-                    <label>
-                        <radio value="woman" />女
-                    </label>
-                </radio-group>
-            </view>
+  <view class="page-body">
+    <form catchsubmit="search">
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">性别</view>
+        <radio-group name="sex">
+          <label>
+            <radio value="man" />男
+          </label>
+          <text>\n</text>
+          <label>
+            <radio value="woman" />女
+          </label>
+        </radio-group>
+      </view>
 
-            <view class="page-section page-section-gap">
-                <view class="page-section-title">泳池长度</view>
-                <radio-group name="poolLength">
-                    <label>
-                        <radio value="50" />50米
-                    </label>
-                    <text>\n</text>
-                    <label>
-                        <radio value="25" />25米
-                    </label>
-                </radio-group>
-            </view>
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">泳池长度</view>
+        <radio-group name="poolLength">
+          <label>
+            <radio value="50" />50米
+          </label>
+          <text>\n</text>
+          <label>
+            <radio value="25" />25米
+          </label>
+        </radio-group>
+      </view>
 
-            <view class="page-section">
-                <view class="page-section-title">项目</view>
-                <view class="weui-cells weui-cells_after-title">
-                    <view class="weui-cell weui-cell_input">
-                        <view class="weui-cell__bd">
-                            <picker name="item" bindchange="itemChange" value='{{itemNum}}' range="{{itemList}}">
-                                <view class="weui-input">{{itemList[itemNum]}}</view>
-                            </picker>
-                        </view>
-                    </view>
+      <view class="page-section">
+        <view class="page-section-title">项目</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <picker name="item" bindchange="itemChange" value='{{itemNum}}' range="{{itemList}}">
+                <view class="weui-input">{{itemList[itemNum]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="page-section-title">成绩时间（单位：分:秒.毫秒）</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <picker mode="multiSelector" bindchange="scoreChange" value="{{score}}" range="{{multiArray}}">
+                <view class="weui-input">
+                  {{multiArray[0][score[0]]}}：{{multiArray[1][score[1]]}} . {{multiArray[2][score[2]]}}
                 </view>
+              </picker>
             </view>
-
-            <view class="page-section">
-                <view class="page-section-title">成绩时间（单位：分:秒.毫秒）</view>
-                <view class="weui-cells weui-cells_after-title">
-                    <view class="weui-cell weui-cell_input">
-                        <view class="weui-cell__bd">
-                            <picker mode="multiSelector" bindchange="scoreChange" value="{{score}}" range="{{multiArray}}">
-                                <view class="weui-input">
-                                    {{multiArray[0][score[0]]}}：{{multiArray[1][score[1]]}} . {{multiArray[2][score[2]]}}
-                                </view>
-                            </picker>
-                        </view>
-                    </view>
-                </view>
-            </view>
+          </view>
+        </view>
+      </view>
 
 
 
-            <button class="weui-btn-area" type="primary" formType="submit">查 询</button>
-        </form>
-    </view>
+      <button class="weui-btn-area" type="primary" formType="submit">查 询</button>
+    </form>
+  </view>
 </view>
 
 <include src="/pages/include/footer.wxml" />

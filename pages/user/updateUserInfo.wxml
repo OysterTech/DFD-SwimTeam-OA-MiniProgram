@@ -1,44 +1,44 @@
 <!--pages/user/updateUserInfo.wxml-->
 <text decode='false'>\n</text>
 <view class="container">
-    <view class="page-body">
-        <form catchsubmit="formSubmit">
-            <view class="page-section">
-                <view class="page-section-title">原密码</view>
-                <view class="weui-cells weui-cells_after-title">
-                    <view class="weui-cell weui-cell_input">
-                        <view class="weui-cell__bd">
-                            <input class="weui-input" name="oldPassword" password />
-                        </view>
-                    </view>
-                </view>
+  <view class="page-body">
+    <form catchsubmit="formSubmit">
+      <view class="page-section">
+        <view class="page-section-title">原密码</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="oldPassword" password />
             </view>
-            <view class="page-section">
-                <view class="page-section-title">新密码</view>
-                <view class="weui-cells weui-cells_after-title">
-                    <view class="weui-cell weui-cell_input">
-                        <view class="weui-cell__bd">
-                            <input class="weui-input" name="newPassword" password />
-                        </view>
-                    </view>
-                </view>
+          </view>
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="page-section-title">新密码</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="newPassword" password />
             </view>
-            <view class="page-section">
-                <view class="page-section-title">确认密码</view>
-                <view class="weui-cells weui-cells_after-title">
-                    <view class="weui-cell weui-cell_input">
-                        <view class="weui-cell__bd">
-                            <input class="weui-input" name="verifyPassword" password />
-                        </view>
-                    </view>
-                </view>
+          </view>
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="page-section-title">确认密码</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="verifyPassword" password />
             </view>
+          </view>
+        </view>
+      </view>
 
-            <view class="btn-area">
-                <button class="weui-btn-area" type="primary" formType="submit">确 认 修 改</button>
-            </view>
-        </form>
-    </view>
+      <view class="btn-area">
+        <button class="weui-btn-area" type="primary" formType="submit">确 认 修 改</button>
+      </view>
+    </form>
+  </view>
 </view>
 
 <include src="/pages/include/footer.wxml" />

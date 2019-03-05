@@ -1,6 +1,6 @@
 <!--pages/user/login.wxml-->
 <view class='text_center'>
-    <text>
+  <text>
     欢迎登录
     广州市东风东路小学游泳队管理系统
 
@@ -8,25 +8,25 @@
 </view>
 
 <form report-submit bindsubmit="toLogin">
-    <view class="page-section">
-        <view class="weui-cells__title">用户名</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <input name="userName" class="weui-input" auto-focus placeholder="请输入管理系统的用户名" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">用户名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="userName" class="weui-input" auto-focus placeholder="请输入管理系统的用户名" />
+      </view>
     </view>
+  </view>
 
-    <view class="page-section">
-        <view class="weui-cells__title">密码</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <input name="password" class="weui-input" password placeholder="请输入用户密码" />
-            </view>
-        </view>
+  <view class="page-section">
+    <view class="weui-cells__title">密码</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input name="password" class="weui-input" password placeholder="请输入用户密码" />
+      </view>
     </view>
+  </view>
 
-    <button class="weui-btn-area" type='primary' form-type="submit">登录 / Login ></button>
+  <button class="weui-btn-area" type='primary' form-type="submit">登录 / Login ></button>
 
 </form>
 

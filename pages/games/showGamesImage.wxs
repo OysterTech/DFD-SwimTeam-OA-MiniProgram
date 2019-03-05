@@ -1,0 +1,14 @@
+var img = function(gamesName) {
+  if (gamesName.indexOf("选拔赛") >= 0) {
+    return 'dfd.png';
+  } else if (gamesName.indexOf("广州") >= 0) {
+    return 'cantonTower.png';
+  } else if (gamesName.indexOf("越秀") >= 0) {
+    return 'yuexiu.png';
+  } else {
+    return 'swim.png';
+  }
+}
+module.exports = {
+  img: img
+};

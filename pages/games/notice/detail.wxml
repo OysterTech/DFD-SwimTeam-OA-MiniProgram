@@ -1,21 +1,25 @@
 <import src="../../../wxParse/wxParse.wxml" />
 
 <view class='page'>
-    <text>\n</text>
-    <view class='page__title dk-title title'>{{info.Title}}</view>
-    <view class="page__bd page__bd_spacing">
-        <view class='dk-show' style='height:{{dkheight}}px;'>
-            <template is="wxParse" data="{{wxParseData:content.nodes}}" />
-        </view>
+  <text>\n</text>
+  <view class='page__title dk-title title'>{{info.Title}}</view>
+  <view class="page__bd page__bd_spacing">
+    <view class='dk-show' style='height:{{dkheight}}px;'>
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
     </view>
+  </view>
 </view>
 
-<view wx:if="{{info.FileJSON!=null}}" class='title'>
-    此通知有附件，请登录网页版下载！
+<view wx:if="{fileJson!=null}}" class='title'>
+  <block wx:for="{{fileJson}}" wx:for-item="info" wx:key="*this">
+    <button type="primary" class='weui-btn-area' bindtap="showFile" data-url="{{info.url}}">
+      <text>下 载 {{info.Name}}</text>
+    </button>
+  </block>
 </view>
 
 <button class='weui-btn-area' bindtap='goBack'>
-    <text decode='true'>&lt; 返回上一页</text>
+  <text decode='true'>&lt; 返回列表</text>
 </button>
 
 <include src="/pages/include/footer.wxml" />

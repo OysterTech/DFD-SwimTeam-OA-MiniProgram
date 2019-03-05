@@ -1,4 +1,5 @@
 /* pages/games/notice/detail.wxss */
-.title{
-    text-align: center;
+
+.title {
+  text-align: center;
 }

@@ -1,30 +1,30 @@
 /* pages/tools/calculateAthleteLevel/result.wxss */
 
 .tr {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.level, .itemName, .td,.yourScore {
-    padding: 10px;
-    border-bottom: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    text-align: center;
-    width: 100%;
+.level, .itemName, .td, .yourScore {
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
 }
 
 .level {
-    /*font-weight: bold;*/
-    background-color: #DADADA;
+  /*font-weight: bold;*/
+  background-color: #dadada;
 }
 
 .itemName {
-    font-weight: bold;
-    background-color: #9D9D9D;
+  font-weight: bold;
+  background-color: #9d9d9d;
 }
 
 .yourScore {
-    font-weight: bold;
-    background-color: #CAFFFF;
+  font-weight: bold;
+  background-color: #caffff;
 }

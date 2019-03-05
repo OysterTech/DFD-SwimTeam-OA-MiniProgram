@@ -1,56 +1,55 @@
 <view class='text_center'>
-    <view class="userinfo-avatar">
-        <open-data type="userAvatarUrl"></open-data>
-    </view>
-    <text>\n {{userInfo.RealName}}，欢迎回来！</text>
+  <view class="userinfo-avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <text>\n {{userInfo.RealName}}，欢迎回来！</text>
 </view>
 
 <view class="weui-panel weui-panel_access">
-    <view class="weui-panel__bd">
-        <navigator url='/pages/user/updateUserInfo'>
-            <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF'>
-                <view class="weui-media-box__title weui-media-box__title_in-text">
-                    <!--text decode='false'>用户资料 &gt;</text-->
-                    <text decode='false'>修改用户密码 &gt;</text>
-                </view>
-            </view>
-        </navigator>
-        <view wx:if="{{userInfo.isAthlete==1}}">
-            <navigator url='/pages/user/updateAthleteInfo'>
-                <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF'>
-                    <view class="weui-media-box__title weui-media-box__title_in-text">
-                        <text decode='false'>运动员资料 &gt;</text>
-                    </view>
-                </view>
-            </navigator>
+  <view class="weui-panel__bd">
+    <navigator url='/pages/user/updateUserInfo'>
+      <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF'>
+        <view class="weui-media-box__title weui-media-box__title_in-text">
+          <text decode='false'>修改登录用户密码 &gt;</text>
         </view>
+      </view>
+    </navigator>
+    <view wx:if="{{userInfo.isAthlete==1}}">
+      <navigator url='/pages/user/updateAthleteInfo'>
+        <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF'>
+          <view class="weui-media-box__title weui-media-box__title_in-text">
+            <text decode='false'>运动员资料 &gt;</text>
+          </view>
+        </view>
+      </navigator>
     </view>
+  </view>
 </view>
 
 <text>\n</text>
 
 <view class="weui-panel weui-panel_access">
-    <view class="weui-panel__bd">
-        <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF' bindtap='logout'>
-            <view class="weui-media-box__title weui-media-box__title_in-text">
-                <text decode='false'>登出 &gt;</text>
-            </view>
-        </view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF' bindtap='logout'>
+      <view class="weui-media-box__title weui-media-box__title_in-text">
+        <text decode='false'>登出 &gt;</text>
+      </view>
     </view>
+  </view>
 </view>
 
 <text>\n</text>
 
 <view class="weui-panel weui-panel_access">
-    <view class="weui-panel__bd">
-        <navigator url='/pages/me/aboutMe'>
-            <view class="weui-media-box weui-media-box_text" style='background-color:#FFE4CA'>
-                <view class="weui-media-box__title weui-media-box__title_in-text">
-                    <text decode='false'>关于我们</text>
-                </view>
-            </view>
-        </navigator>
-    </view>
+  <view class="weui-panel__bd">
+    <navigator url='/pages/me/aboutMe'>
+      <view class="weui-media-box weui-media-box_text" style='background-color:#FFE4CA'>
+        <view class="weui-media-box__title weui-media-box__title_in-text">
+          <text decode='false'>关于我们</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
 </view>
 
 <include src="/pages/include/footer.wxml" />

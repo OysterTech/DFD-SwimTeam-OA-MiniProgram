@@ -1,8 +1,11 @@
 <text>\n</text>
 <view class="weui-footer">
-    <view class="weui-footer__text">Copyright © 2014-2018 生蚝科技 (V1.8)</view>
-    <navigator url='/pages/me/contactMe'>
-        <view class="weui-footer__text" style="color:green">点此联系管理员</view>
-    </navigator>
+  <view class="weui-footer__text">Copyright © 2014-2019 生蚝科技 (V2.2.0)</view>
+  <navigator url='/pages/me/aboutMe'>
+    <view class="weui-footer__text" style="color:blue">点此查看“关于生蚝科技”</view>
+  </navigator>
+  <navigator url='/pages/me/contactMe'>
+    <view class="weui-footer__text" style="color:green">点此联系管理员</view>
+  </navigator>
 </view>
 <text>\n</text>
