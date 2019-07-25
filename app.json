@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/games/index",
 		"pages/auth/index",
 		"pages/user/info",
 		"pages/user/updateUserInfo",
@@ -7,19 +8,30 @@
 		"pages/user/login",
 		"pages/user/logout",
 		"pages/user/reg",
-		"pages/games/index",
 		"pages/games/info",
 		"pages/games/detail",
-		"pages/games/notice/list",
-		"pages/games/notice/detail",
 		"pages/enroll/chooseItem",
 		"pages/enroll/viewEnrollItem",
 		"pages/tools/index",
-		"pages/tools/calculateAthleteLevel/index",
-		"pages/tools/calculateAthleteLevel/result",
 		"pages/include/footer",
 		"pages/me/aboutMe",
 		"pages/me/contactMe"
+	],
+	"subpackages": [
+		{
+			"root": "tool-calculateAthleteLevel",
+			"pages": [
+				"pages/index",
+				"pages/result"
+			]
+		},
+		{
+			"root": "games-notice",
+			"pages": [
+				"pages/list",
+				"pages/detail"
+			]
+		}
 	],
 	"window": {
 		"navigationBarBackgroundColor": "#118fff",
@@ -51,5 +63,6 @@
 				"text": "个人信息"
 			}
 		]
-	}
+	},
+	"sitemapLocation": "sitemap.json"
 }

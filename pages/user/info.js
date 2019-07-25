@@ -46,5 +46,11 @@ Page({
     wx.redirectTo({
       url: '/pages/user/logout',
     })
+  },
+
+  login: function() {
+    wx.navigateTo({
+      url: '/pages/user/login',
+    })
   }
 })

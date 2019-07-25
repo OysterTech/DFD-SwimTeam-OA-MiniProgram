@@ -1,5 +1,7 @@
-// pages/tools/calculateAthleteLevel/index.js
 var app = getApp();
+
+// 在页面中定义插屏广告
+var interstitialAd = null;
 
 Page({
   data: {
@@ -51,6 +53,32 @@ Page({
       style_en: "freestyle",
       itemMeter: '50'
     });
+
+    // 在页面onLoad回调事件中创建插屏广告实例
+    if (wx.createInterstitialAd) {
+      interstitialAd = wx.createInterstitialAd({
+        adUnitId: 'adunit-41bc0684384985d9'
+      })
+      interstitialAd.onLoad(() => {
+        console.log('onLoad event emit')
+      })
+      interstitialAd.onError((err) => {
+        console.log('onError event emit', err)
+      })
+		}
+
+    // 在适合的场景显示插屏广告
+    interstitialAd.show().catch((err) => {
+      console.error('calculateLevel',err)
+    })
+
+		interstitialAd.onLoad(() => {
+			console.log('插屏 广告加载成功')
+		})
+
+    interstitialAd.onError(err => {
+      console.log(err)
+    })
   },
 
   scoreChange: function(e) {
@@ -150,7 +178,7 @@ Page({
     wx.setStorageSync('athLevel-score_beauty', _this.data.score_beauty);
 
     wx.navigateTo({
-      url: '/pages/tools/calculateAthleteLevel/result'
+      url: '/tool-calculateAthleteLevel/pages/result'
     })
   }
 })

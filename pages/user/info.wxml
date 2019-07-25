@@ -1,11 +1,11 @@
-<view class='text_center'>
+<view wx:if="{{userInfo.UserID>=1}}" class='text_center'>
   <view class="userinfo-avatar">
     <open-data type="userAvatarUrl"></open-data>
   </view>
   <text>\n {{userInfo.RealName}}，欢迎回来！</text>
 </view>
 
-<view class="weui-panel weui-panel_access">
+<view wx:if="{{userInfo.UserID>=1}}" class="weui-panel weui-panel_access">
   <view class="weui-panel__bd">
     <navigator url='/pages/user/updateUserInfo'>
       <view class="weui-media-box weui-media-box_text" style='background-color:#ECF5FF'>
@@ -28,11 +28,20 @@
 
 <text>\n</text>
 
-<view class="weui-panel weui-panel_access">
+<view wx:if="{{userInfo.UserID>=1}}" class="weui-panel weui-panel_access">
   <view class="weui-panel__bd">
     <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF' bindtap='logout'>
       <view class="weui-media-box__title weui-media-box__title_in-text">
         <text decode='false'>登出 &gt;</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else class="weui-panel weui-panel_access">
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text" style='background-color:#DFFFDF' bindtap='login'>
+      <view class="weui-media-box__title weui-media-box__title_in-text">
+        <text decode='false'>登录 &gt;</text>
       </view>
     </view>
   </view>
@@ -51,5 +60,9 @@
     </navigator>
   </view>
 </view>
+
+<text>\n</text>
+
+<ad unit-id="adunit-ed2028e348574d49"></ad>
 
 <include src="/pages/include/footer.wxml" />

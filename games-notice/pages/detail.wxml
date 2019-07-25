@@ -1,4 +1,4 @@
-<import src="../../../wxParse/wxParse.wxml" />
+<import src="../resources/wxParse/wxParse.wxml" />
 
 <view class='page'>
   <text>\n</text>

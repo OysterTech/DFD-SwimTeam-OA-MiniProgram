@@ -10,7 +10,7 @@
     <block wx:if="{{level == index}}">
       <view class="tr">
         <view class='yourScore'>
-          <image class="weui-media-box__thumb" src="../../../images/icons/level.png" />
+          <image class="weui-media-box__thumb" src="/images/icons/level.png" />
         </view>
         <view class='yourScore'>{{levelName[index]}}</view>
         <view class='yourScore'>{{score_beauty}}</view>

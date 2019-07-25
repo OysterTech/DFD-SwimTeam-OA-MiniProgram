@@ -1,5 +1,6 @@
-// pages/me/contactMe.js
 var app = getApp();
+// 在页面中定义插屏广告
+var interstitialAd = null;
 
 Page({
 
@@ -11,7 +12,29 @@ Page({
     contactType: 1
   },
 
-  submit: function(e) {
+	onLoad: function (options) {
+		// 在页面onLoad回调事件中创建插屏广告实例
+		if (wx.createInterstitialAd) {
+			interstitialAd = wx.createInterstitialAd({
+				adUnitId: 'adunit-f25915ecf4536bff'
+			})
+			interstitialAd.onLoad(() => {
+				console.log('onLoad event emit')
+			})
+			interstitialAd.onError((err) => {
+				console.log('onError event emit', err)
+			})
+
+			// 在适合的场景显示插屏广告
+			if (interstitialAd) {
+				interstitialAd.show().catch((err) => {
+					console.error(err)
+				})
+			}
+		}
+	},
+	
+	submit: function(e) {
     var realName = e.detail.value.realName;
     var content = e.detail.value.content;
     var contactType = this.data.contactType;

@@ -5,7 +5,7 @@
   <block wx:if="{{noticeList!=''}}">
     <!-- [bgn]循环显示通知 -->
     <block class="weui-media-box weui-media-box_text" wx:for="{{noticeList}}" wx:for-item="info" wx:key="*this">
-      <navigator url="/pages/games/notice/detail?noticeID={{info.NoticeID}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <navigator url="detail?noticeID={{info.NoticeID}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">{{info.Title}}</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>

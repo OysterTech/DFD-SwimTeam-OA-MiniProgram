@@ -7,7 +7,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    this.getOpenID();
+  },
 
   toLogin: function(e) {
     var userName = e.detail.value.userName;
@@ -31,6 +33,7 @@ Page({
     }
 
     wx.showNavigationBarLoading();
+
     wx.showLoading({
       title: '登录中',
       mask: 'true',
@@ -89,14 +92,43 @@ Page({
       }
     });
   },
+
   toAuth: function() {
     wx.redirectTo({
       url: '/pages/auth/index?from=loginButton'
     })
   },
+
   toReg: function() {
     wx.navigateTo({
       url: '/pages/user/reg'
     })
+  },
+
+  getOpenID: function() {
+    wx.login({
+      success: function(res) {
+        if (res.code) {
+          // 请求获取openID
+          wx.request({
+            url: app.data.API_HOST + '/wxLogin.php',
+            header: {
+              'content-type': 'application/json'
+            },
+            data: {
+              code: res.code
+            },
+            success: function(data) {
+              //console.log(data.data.data.openID)
+              var info = data.data;
+              wx.setStorageSync('openID', info.data.openID);
+              wx.setStorageSync('userCode', res.code);
+            }
+          });
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    });
   }
 })

@@ -1,6 +1,6 @@
 // pages/games/notice/detail.js
 var app = getApp()
-let wxparse = require("../../../wxParse/wxParse.js");
+let wxparse = require("../resources/wxParse/wxParse.js");
 
 Page({
 

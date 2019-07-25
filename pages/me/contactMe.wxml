@@ -55,6 +55,8 @@
     </view>
   </view>
 
+	<ad unit-id="adunit-f42418f35075c28e"></ad>
+
   <button class="weui-btn-area" type='primary' form-type="submit">提 交 ></button>
 
 </form>

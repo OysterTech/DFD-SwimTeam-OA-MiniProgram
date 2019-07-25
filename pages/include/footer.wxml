@@ -1,6 +1,6 @@
 <text>\n</text>
 <view class="weui-footer">
-  <view class="weui-footer__text">Copyright © 2014-2019 生蚝科技 (V2.2.0)</view>
+  <view class="weui-footer__text">Copyright © 2014-2019 生蚝科技 (V2.4.0)</view>
   <navigator url='/pages/me/aboutMe'>
     <view class="weui-footer__text" style="color:blue">点此查看“关于生蚝科技”</view>
   </navigator>

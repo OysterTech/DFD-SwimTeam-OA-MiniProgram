@@ -8,10 +8,12 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.1.0",
+	"libVersion": "2.6.6",
 	"appid": "wxd99996ad603a4750",
 	"projectname": "DFDSTOA",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

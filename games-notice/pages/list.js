@@ -1,6 +1,6 @@
 // pages/games/notice/list.js
 var app = getApp()
-var utils = require('../../../utils/util.js');
+var utils = require('../../utils/util.js');
 
 Page({
 

@@ -1,5 +1,4 @@
 @import "weUI.wxss";
-@import "wxParse/wxParse.wxss";
 
 .text_center {
   text-align: center;

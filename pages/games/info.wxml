@@ -14,7 +14,7 @@
       </navigator>
     </block>
   </block>
-  <navigator url="notice/list?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
+  <navigator url="/games-notice/pages/list?gamesID={{gamesID}}" class="weui-grid" hover-class="weui-grid_active">
     <image class="weui-grid__icon" src="../../images/icons/notice.png" />
     <view class="weui-grid__label">通知规程</view>
   </navigator>
@@ -22,6 +22,8 @@
     <image class="weui-grid__icon" src="../../images/icons/detail.png" />
     <view class="weui-grid__label">比赛信息</view>
   </navigator>
+
+	<ad unit-id="adunit-4b25adeb9f1f14ce"></ad>
 </view>
 
 <include src="/pages/include/footer.wxml" />

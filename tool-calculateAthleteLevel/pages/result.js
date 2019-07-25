@@ -1,14 +1,13 @@
-// pages/tools/calculateAthleteLevel/result.js
 var app = getApp();
-
-var man = require('man.js');
-var woman = require('woman.js');
-var man = man.data;
-var woman = woman.data;
+const man = require('../resources/man.js');
+const woman = require('../resources/woman.js');
+const manData = Object.freeze(man.data);
+const womanData = Object.freeze(woman.data);
 
 Page({
   data: {
-    levelName: ['国际健将', '运动健将', '一级运动员', '二级运动员', '三级运动员']
+    levelName: ['国际健将', '运动健将', '一级运动员', '二级运动员', '三级运动员'],
+    scoreList: []
   },
 
   /**
@@ -26,10 +25,10 @@ Page({
     var level = -1;
 
     if (sex == "man") {
-      var scoreList = man[poolLength][style_en][itemMeter];
+			var scoreList = manData[poolLength][style_en][itemMeter];
       sex = "男子";
     } else if (sex == "woman") {
-      var scoreList = woman[poolLength][style_en][itemMeter];
+      var scoreList = womanData[poolLength][style_en][itemMeter];
       sex = "女子";
     }
 
@@ -76,12 +75,11 @@ Page({
     // 等级判断[END]
 
     for (i in scoreList) {
-      //scoreList[i] = this.scoreFormat(scoreList[i].toString());
+			if(scoreList[i].length==8) continue;
+      scoreList[i] = this.scoreFormat(scoreList[i].toString());
     }
 
     this.setData({
-      manData: man,
-      womanData: woman,
       scoreList: scoreList,
       score: this.scoreFormat(score2),
       score_beauty: score_beauty,
@@ -101,13 +99,21 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function() {
-    //this.removeStorage();
+    this.removeStorage();
   },
 
   scoreFormat: function(score) {
-    var millisecond = score.substr(-2, 2);
-    var second = score.substr(-4, 2);
-    var minute = score.substr(-6, 2);
+    var minute = '00';
+    var second = '00';
+    var millSecond = '00';
+
+    if (score.length >= 6) var minute = score.substr(-6, 2);
+    else if (score.length >= 5) var minute = '0' + score.substr(-5, 1);
+    if (score.length >= 4) var second = score.substr(-4, 2);
+    else if (score.length >= 3) var second = '0' + score.substr(-3, 1);
+    if (score.length >= 2) var millisecond = score.substr(-2, 2);
+    else if (score.length >= 1) var millisecond = '0' + score.substr(-1, 1);
+
     return minute + ":" + second + "." + millisecond;
   },
 
