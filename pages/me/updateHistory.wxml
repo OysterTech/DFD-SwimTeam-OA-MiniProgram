@@ -1,0 +1,18 @@
+<ad unit-id="adunit-24006f82d7a72333" ad-type="video" ad-theme="white"></ad>
+
+<view style="padding:5px 5px 0 5px">
+
+  <block wx:for="{{data}}" wx:for-index="versionName">
+    <text style="font-weight: bold;font-size: 22px;color: #02DF82;">{{versionName}}</text> ({{data[versionName]['date']}})
+    <text decode="false">\n</text>
+
+    <block wx:for="{{data[versionName]['updateList']}}" wx:for-index="num">
+      {{num+1}}. {{data[versionName]['updateList'][num]}}
+      <text decode="false">\n</text>
+    </block>
+    <text decode="false">\n</text>
+  </block>
+
+</view>
+
+<ad unit-id="adunit-0613e3b3d35ccf9f" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white" ad-intervals='30'></ad>

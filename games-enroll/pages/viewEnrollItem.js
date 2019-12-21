@@ -24,7 +24,7 @@ Page({
       method: "POST",
       data: {
         athId: userInfo.AthID,
-        gamesId: options.gamesID
+        gamesId: options.gamesId
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -43,7 +43,7 @@ Page({
   goBack: function() {
     var _this = this;
     wx.redirectTo({
-      url: "/pages/games/info?gamesID=" + _this.data.gamesID
+      url: "/pages/games/info?gamesId=" + _this.data.gamesId
     });
   }
 })

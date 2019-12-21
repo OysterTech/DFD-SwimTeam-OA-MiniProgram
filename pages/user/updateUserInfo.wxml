@@ -34,7 +34,7 @@
         </view>
       </view>
 
-			<ad unit-id="adunit-6d510e12f3f0dce9"></ad>
+			<ad unit-id="adunit-6d510e12f3f0dce9" ad-intervals='30'></ad>
 
       <view class="btn-area">
         <button class="weui-btn-area" type="primary" formType="submit">确 认 修 改</button>

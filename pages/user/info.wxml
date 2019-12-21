@@ -63,6 +63,6 @@
 
 <text>\n</text>
 
-<ad unit-id="adunit-ed2028e348574d49"></ad>
+<ad unit-id="adunit-ed2028e348574d49" ad-intervals='30'></ad>
 
 <include src="/pages/include/footer.wxml" />

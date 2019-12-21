@@ -24,7 +24,7 @@ Page({
         wx.request({
           url: app.data.API_HOST + 'getGamesNotice.php',
           data: {
-            GamesID: options.gamesID
+            GamesID: options.gamesId
           },
           header: {
             'content-type': 'application/json'
@@ -32,10 +32,10 @@ Page({
           success: function(res) {
             _this.setData({
               noticeList: res.data.data,
-              gamesId: options.gamesID
+              gamesId: options.gamesId
             });
             wx.hideLoading();
-            utils.setReadNotice(options.gamesID);
+            utils.setReadNotice(options.gamesId);
           }
         });
       }
@@ -44,8 +44,13 @@ Page({
 
   goBack: function() {
     var _this = this;
-    wx.redirectTo({
-      url: "/pages/games/info?gamesID=" + _this.data.gamesId
-    });
+   
+    wx.navigateBack({
+      fail:function(){
+        wx.redirectTo({
+          url: "/pages/games/info?gamesID=" + _this.data.gamesId
+        });
+      }
+    })
   }
 })

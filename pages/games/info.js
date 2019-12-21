@@ -16,7 +16,7 @@ Page({
 
     if (wx.getStorageSync('gamesVenue') != "") {
       this.setData({
-        gamesID: options.gamesID,
+        gamesId: options.gamesId,
         gamesName: wx.getStorageSync('gamesName'),
         venue: wx.getStorageSync('gamesVenue'),
         startDate: wx.getStorageSync('gamesStartDate'),
@@ -24,12 +24,13 @@ Page({
       });
     } else {
       this.setData({
-        gamesID: options.gamesID,
+        gamesId: options.gamesId,
         gamesName: options.gamesName,
         venue: options.venue,
         startDate: options.startDate,
         userInfo: userInfo
       });
+      wx.setStorageSync('gamesId', options.gamesId);
       wx.setStorageSync('gamesVenue', options.venue);
       wx.setStorageSync('gamesStartDate', options.startDate);
       wx.setStorageSync('gamesName', options.gamesName);
@@ -49,7 +50,7 @@ Page({
           method: "POST",
           data: {
             athId: userInfo.AthID,
-            gamesId: _this.data.gamesID
+            gamesId: _this.data.gamesId
           },
           header: {
             'content-type': 'application/x-www-form-urlencoded'
@@ -68,7 +69,7 @@ Page({
             });
             wx.hideLoading();
 
-            if (utils.checkHaveReadNotice(options.gamesID) != true) {
+            if (utils.checkHaveReadNotice(options.gamesId) != true) {
               wx.showModal({
                 title: "提示",
                 content: "请先阅读规程，再进行报名哦~",
@@ -79,5 +80,13 @@ Page({
         });
       }
     });
+  },
+
+  onShareAppMessage: function(res) {
+    return {
+      title: '东风东泳队报名系统-' + wx.getStorageSync('gamesName'),
+      path: '/pages/games/info?gamesId=' + wx.getStorageSync('gamesId') + '&gamesName=' + wx.getStorageSync('gamesName') + '&venue=' + wx.getStorageSync('gamesVenue') + '&startDate=' + wx.getStorageSync('gamesStartDate'),
+      imageUrl: 'https://api.xshgzs.com/dfd/images/gamesInfoShare.png'
+    }
   }
 })

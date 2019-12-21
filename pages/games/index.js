@@ -51,7 +51,8 @@ Page({
   onShareAppMessage: function(res) {
     return {
       title: '东风东游泳队报名系统',
-      path: '/pages/games/index'
+      path: '/pages/games/index',
+			imageUrl:'https://api.xshgzs.com/dfd/images/mainPageShare.png'
     }
   }
 })

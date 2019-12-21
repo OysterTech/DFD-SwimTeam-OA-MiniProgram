@@ -6,7 +6,7 @@ const womanData = Object.freeze(woman.data);
 
 Page({
   data: {
-    levelName: ['国际健将', '运动健将', '一级运动员', '二级运动员', '三级运动员'],
+    levelName: ['国际健将', '运动健将', '一级运动员', '二级运动员', '三级运动员', '---'],
     scoreList: []
   },
 
@@ -25,7 +25,7 @@ Page({
     var level = -1;
 
     if (sex == "man") {
-			var scoreList = manData[poolLength][style_en][itemMeter];
+      var scoreList = manData[poolLength][style_en][itemMeter];
       sex = "男子";
     } else if (sex == "woman") {
       var scoreList = womanData[poolLength][style_en][itemMeter];
@@ -59,10 +59,13 @@ Page({
     }
     // 成绩处理[END]
 
+    console.log(score);
+
     // 等级判断[BGN]
     var score3 = parseInt(score2);
     for (var i = 0; i <= 4; i++) {
       var levelScore = parseInt(scoreList[i]);
+      console.log(scoreList + '|' + score3);
       if (score3 <= levelScore) {
         level = i;
         break;
@@ -74,13 +77,14 @@ Page({
     }
     // 等级判断[END]
 
+    let showScoreList = [];
     for (i in scoreList) {
-			if(scoreList[i].length==8) continue;
-      scoreList[i] = this.scoreFormat(scoreList[i].toString());
+      if (scoreList[i].length == 8) continue;
+      showScoreList[i] = this.scoreFormat(scoreList[i].toString());
     }
 
     this.setData({
-      scoreList: scoreList,
+      scoreList: showScoreList,
       score: this.scoreFormat(score2),
       score_beauty: score_beauty,
       level: level,

@@ -6,14 +6,14 @@ Page({
     var _this = this;
     var userInfo = wx.getStorageSync('userInfo');
     _this.setData({
-      gamesId: options.gamesID
+      gamesId: options.gamesId
     });
 
     wx.setNavigationBarTitle({
       title: "报名 / " + wx.getStorageSync("gamesName")
     })
 
-    if (util.checkHaveReadNotice(options.gamesID) != true) {
+    if (util.checkHaveReadNotice(options.gamesId) != true) {
       wx.showModal({
         title: '提示',
         content: '请先阅读规程，谢谢！',
@@ -21,7 +21,7 @@ Page({
         success: function(res) {
           if (res.confirm) {
             wx.navigateTo({
-              url: '/pages/games/notice/list?gamesID=' + options.gamesID
+              url: '/games-notice/pages/list?gamesId=' + options.gamesId
             });
           }
         }
@@ -39,7 +39,7 @@ Page({
             'content-type': 'application/json'
           },
           data: {
-            GamesID: options.gamesID,
+            GamesID: options.gamesId,
             YearGroup: userInfo.YearGroup,
             userId: userInfo.UserID
           },

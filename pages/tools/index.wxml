@@ -7,9 +7,14 @@
         <button class="weui-btn-area" class="weui-media-box__title weui-media-box__title_in-text" formType="submit">计算运动员等级 ></button>
       </view>
     </form>
+    <!--form catchsubmit="goto2">
+      <view class="weui-media-box weui-media-box_text">
+        <button class="weui-btn-area" class="weui-media-box__title weui-media-box__title_in-text" formType="submit">计算FINA成绩分 > (NEW!!!)</button>
+      </view>
+    </form-->
   </view>
 </view>
 
-<ad unit-id="adunit-ec8c238597f0ec42"></ad>
+<ad unit-id="adunit-ec8c238597f0ec42" ad-intervals='30'></ad>
 
 <include src="/pages/include/footer.wxml" />

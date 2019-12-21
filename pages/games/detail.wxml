@@ -23,4 +23,6 @@
   </view>
 </view>
 
+<ad unit-id="adunit-380b0a7ba92ef0d8" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white" ad-intervals='30'></ad>
+
 <include src="/pages/include/footer.wxml" />

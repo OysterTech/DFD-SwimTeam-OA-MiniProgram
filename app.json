@@ -10,12 +10,11 @@
 		"pages/user/reg",
 		"pages/games/info",
 		"pages/games/detail",
-		"pages/enroll/chooseItem",
-		"pages/enroll/viewEnrollItem",
 		"pages/tools/index",
 		"pages/include/footer",
 		"pages/me/aboutMe",
-		"pages/me/contactMe"
+		"pages/me/contactMe",
+		"pages/me/updateHistory"
 	],
 	"subpackages": [
 		{
@@ -30,6 +29,13 @@
 			"pages": [
 				"pages/list",
 				"pages/detail"
+			]
+		},
+		{
+			"root": "games-enroll",
+			"pages": [
+				"pages/chooseItem",
+				"pages/viewEnrollItem"
 			]
 		}
 	],

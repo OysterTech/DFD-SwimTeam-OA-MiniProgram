@@ -1,13 +1,21 @@
 <!--pages/games/index.wxml-->
 <wxs src="showGamesImage.wxs" module="showGamesImage" />
+
+<navigator url="/pages/me/aboutMe">
+  <view class="weui-toptips weui-toptips_success weui-toptips_show">
+    由于高三党开发不易，植入了部分广告，望各位用户见谅!（点此可给予资助哈~）
+  </view>
+</navigator>
+
 <view class="page">
   <view class="page__bd">
     <view class="weui-panel weui-panel_access">
       <view class="weui-panel__hd">所有比赛</view>
       <view class="weui-panel__bd">
-			<ad unit-id="adunit-4b25adeb9f1f14ce"></ad>
-        <view wx:for="{{ gamesList }}" wx:for-item="info" wx:key="*this">
-          <navigator url="info?gamesID={{ info.GamesID }}&gamesName={{ info.GamesName }}&venue={{info.Venue}}&startDate={{info.StartDate}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <ad unit-id="adunit-4b25adeb9f1f14ce" ad-intervals='30'></ad>
+        
+				<view wx:for="{{ gamesList }}" wx:for-item="info" wx:key="*this">
+          <navigator url="info?gamesId={{ info.GamesID }}&gamesName={{ info.GamesName }}&venue={{info.Venue}}&startDate={{info.StartDate}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
             <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
               <image class="weui-media-box__thumb" src="../../images/icons/{{showGamesImage.img(info.GamesName)}}" />
             </view>

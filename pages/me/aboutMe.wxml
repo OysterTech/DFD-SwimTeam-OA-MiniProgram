@@ -14,8 +14,8 @@
 <text decode='false'>\n\n</text>
 
 <text decode='false'>下附小生蚝的资助码，嘻嘻~（点击放大后长按扫描即可~）</text>
-<image src='../../images/supportMe.jpg' bindtap='showZan'></image>
+<image src='../../images/supportMe.jpg' bindtap='showZan' style="width: 100%;height: 360px;"></image>
 
-<ad unit-id="adunit-89b0da92b2080fae"></ad>
+<ad unit-id="adunit-89b0da92b2080fae" ad-intervals='30'></ad>
 
 <include src="/pages/include/footer.wxml" />
